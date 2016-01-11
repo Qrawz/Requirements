@@ -1,0 +1,22 @@
+{
+	"name": "scion/requirements",
+	"description": "",
+	"keywords": [
+		""
+	],
+	"license": "LGPL-3.0+",
+	"authors": [
+		{
+			"name": "David SANCHEZ",
+			"email": "david38sanchez@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Scion\\Requirements\\": "./"
+		}
+	}
+}
