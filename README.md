@@ -6,8 +6,7 @@ A small library to easily handle detection of minimum system requirements.
 * Detects absence of PHP extensions.
 
 ## Getting Started
-```
-<?php
+```php
 $phpRequirements = new \Scion\Requirements\PHPRequirements();
 
 if ($phpRequirements->check('7.0.1')) {
