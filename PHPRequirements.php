@@ -15,6 +15,17 @@ class PHPRequirements extends Requirements {
 	}
 
 	/**
+	 * Check ZendEngine version is greater than $version
+	 * @param mixed $version
+	 * @return bool
+	 */
+	public function checkZendEngine($version) {
+		return version_compare(
+			zend_version(), $version, '>='
+		);
+	}
+
+	/**
 	 * Check extension is loaded
 	 * @param string $extension
 	 * @return bool
@@ -36,5 +47,14 @@ class PHPRequirements extends Requirements {
 		}
 
 		return true;
+	}
+
+	/**
+	 * Check current user is the same as $username
+	 * @param string $username
+	 * @return bool
+	 */
+	public function checkCurrentUser($username) {
+		return $username === get_current_user();
 	}
 }
