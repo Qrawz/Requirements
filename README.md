@@ -3,7 +3,9 @@ A small library to easily handle detection of minimum system requirements.
 
 ## Features
 * Detects PHP versions
+* Detects Zend Engine versions.
 * Detects absence of PHP extensions.
+* Detects current user.
 
 ## Getting Started
 * First, we create a new instance of `PHPRequirements` class to check requirements. 
