@@ -1,9 +1,7 @@
 {
 	"name": "scion/requirements",
-	"description": "",
-	"keywords": [
-		""
-	],
+	"description": "A small library to easily handle detection of minimum system requirements.",
+	"keywords": ["requirements", "system requirements", "minimum"],
 	"license": "LGPL-3.0+",
 	"authors": [
 		{
