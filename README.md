@@ -1,5 +1,6 @@
 # Requirements
-A small library to easily handle detection of minimum system requirements.
+A small library to easily handle detection of minimum system requirements.  
+This library require at least `PHP 5.3` to be used.
 
 ## Features
 * Detects PHP versions
@@ -8,45 +9,19 @@ A small library to easily handle detection of minimum system requirements.
 * Detects current user.
 
 ## Getting Started
-* First, we create a new instance of `PHPRequirements` class to check requirements. 
 ```php
+// Require Composer autoloader class
+require 'vendor/autoload.php';
+```
+
+## PHPRequirements sample usage
+```php
+// Create new instance of PHPRequirements class.
 $phpRequirements = new \Scion\Requirements\PHPRequirements();
 ```
 
-* You can now call the `check()` method to check the minimum PHP version installed in your server, like:
-```php
-if ($phpRequirements->check('7.0.1')) {
-	// minimum php requirements satisfied
-}
-```
+> Find all sample usage in the next wiki section: (PHPRequirements sample usage)[https://github.com/Scion-Framework/Requirements/wiki/PHPRequirements-sample-usage].
 
-* You can also check if a PHP extension is loaded by your PHP, like:
-```php
-if ($phpRequirements->checkExtension('mysqli')) {
-	// mysqli extension is loaded
-}
-```
-
-* You can check multiple extensions using the next code:
-```php
-if ($phpRequirements->checkExtensions(array('mysqli', 'sqlite3'))) {
-	// mysqli and sqlite3 extension are loaded
-}
-```
-
-* You can check the current user executing the PHP script, like:
-```php
-if ($phpRequirements->checkCurrentUser('root')) {
-	// root is executing this PHP script
-}
-```
-
-* You can check the Zend Engine version, like:
-```php
-if ($phpRequirements->checkZendEngine('3.0')) {
-	// Zend Engine is greater or equal to 3.0
-}
-```
 
 ## License
 The files in this archive are released under the [GNU Lesser GPL v3](LICENSE.md) license.
