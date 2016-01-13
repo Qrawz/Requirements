@@ -1,6 +1,6 @@
 # Requirements
 A small library to easily handle detection of minimum system requirements.  
-This library require at least `PHP 5.3` to be used.
+This library require at least **PHP 5.3** to be used.
 
 ## Features
 * Detects PHP versions
@@ -14,13 +14,13 @@ This library require at least `PHP 5.3` to be used.
 require 'vendor/autoload.php';
 ```
 
-## PHPRequirements sample usage
+## RequirementChecker sample usage
 ```php
-// Create new instance of PHPRequirements class.
-$phpRequirements = new \Scion\Requirements\PHPRequirements();
+// Create new instance of RequirementChecker class.
+$requirements = new \Scion\Requirements\RequirementChecker();
 ```
 
-> Find all sample usage in the next wiki section: (PHPRequirements sample usage)[https://github.com/Scion-Framework/Requirements/wiki/PHPRequirements-sample-usage].
+> Find all sample usage in the next wiki section: [RequirementChecker sample usage](https://github.com/Scion-Framework/Requirements/wiki/RequirementChecker-sample-usage).
 
 
 ## License

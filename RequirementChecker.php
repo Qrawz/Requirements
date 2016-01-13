@@ -1,7 +1,7 @@
 <?php
 namespace Scion\Requirements;
 
-class PHPRequirements extends Requirements {
+class RequirementChecker {
 
 	/**
 	 * Check PHP version is greater than $version
@@ -56,5 +56,14 @@ class PHPRequirements extends Requirements {
 	 */
 	public function checkCurrentUser($username) {
 		return $username === get_current_user();
+	}
+
+	/**
+	 * Check current directory is writable
+	 * @param string $dir
+	 * @return bool
+	 */
+	public function checkWritableDir($dir) {
+		return is_dir($dir) && is_writable($dir) && !is_file($dir);
 	}
 }
