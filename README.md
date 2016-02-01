@@ -1,6 +1,6 @@
 # Requirements
 A small library to easily handle detection of minimum system requirements.  
-This library require at least **PHP 5.3** to be used.
+This library require at least **PHP 5.4** to be used.
 
 ## Features
 * Detects PHP versions

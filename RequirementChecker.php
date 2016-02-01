@@ -4,7 +4,7 @@ namespace Scion\Requirements;
 class RequirementChecker {
 
 	/**
-	 * Check PHP version is greater than $version
+	 * Check PHP version is greater than $version.
 	 * @param mixed $version
 	 * @return bool
 	 */
@@ -15,7 +15,7 @@ class RequirementChecker {
 	}
 
 	/**
-	 * Check ZendEngine version is greater than $version
+	 * Check ZendEngine version is greater than $version.
 	 * @param mixed $version
 	 * @return bool
 	 */
@@ -26,7 +26,7 @@ class RequirementChecker {
 	}
 
 	/**
-	 * Check extension is loaded
+	 * Check extension is loaded.
 	 * @param string $extension
 	 * @return bool
 	 */
@@ -35,7 +35,7 @@ class RequirementChecker {
 	}
 
 	/**
-	 * Check extensions are loaded
+	 * Check extensions are loaded.
 	 * @param array $extensions
 	 * @return bool
 	 */
@@ -50,7 +50,7 @@ class RequirementChecker {
 	}
 
 	/**
-	 * Check current user is the same as $username
+	 * Check current user is the same as $username.
 	 * @param string $username
 	 * @return bool
 	 */
@@ -59,11 +59,30 @@ class RequirementChecker {
 	}
 
 	/**
-	 * Check current directory is writable
+	 * Check current directory is writable.
 	 * @param string $dir
 	 * @return bool
 	 */
 	public function checkWritableDir($dir) {
 		return is_dir($dir) && is_writable($dir) && !is_file($dir);
+	}
+
+	/**
+	 * Check if OpCache is enabled.
+	 * @return bool
+	 */
+	public function isOpCacheEnabled() {
+		return (bool)opcache_get_configuration()['directives']['opcache.enable'];
+	}
+
+	/**
+	 * Check OpCache version is greater than $version.
+	 * @param string|int $version
+	 * @return mixed
+	 */
+	public function checkOpCacheVersion($version) {
+		return version_compare(
+			opcache_get_configuration()['version']['version'], $version, '>='
+		);
 	}
 }
