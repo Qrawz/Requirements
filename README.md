@@ -17,10 +17,10 @@ require 'vendor/autoload.php';
 ## RequirementChecker sample usage
 ```php
 // Create new instance of RequirementChecker class.
-$requirements = new \Scion\Requirements\RequirementChecker();
+$requirements = new \FlexyProject\Requirements\RequirementChecker();
 ```
 
-> Find all sample usage in the next wiki section: [RequirementChecker sample usage](https://github.com/Scion-Framework/Requirements/wiki/RequirementChecker-sample-usage).
+> Find all sample usage in the next wiki section: [RequirementChecker sample usage](https://github.com/FlexyProject/Requirements/wiki/RequirementChecker-sample-usage).
 
 
 ## License

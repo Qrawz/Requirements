@@ -1,5 +1,5 @@
 <?php
-namespace Scion\Requirements;
+namespace FlexyProject\Requirements;
 
 class RequirementChecker {
 

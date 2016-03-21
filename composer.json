@@ -1,5 +1,5 @@
 {
-	"name": "scion/requirements",
+	"name": "flexyproject/requirements",
 	"description": "A small library to easily handle detection of minimum system requirements.",
 	"keywords": ["requirements", "system requirements", "minimum"],
 	"license": "LGPL-3.0+",
@@ -14,7 +14,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Scion\\Requirements\\": "./"
+			"FlexyProject\\Requirements\\": "./"
 		}
 	}
 }
