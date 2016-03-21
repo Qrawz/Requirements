@@ -8,7 +8,7 @@ class RequirementChecker {
 	 * @param mixed $version
 	 * @return bool
 	 */
-	public function check($version) {
+	public static function check($version) {
 		return version_compare(
 			phpversion(), $version, '>='
 		);
@@ -19,7 +19,7 @@ class RequirementChecker {
 	 * @param mixed $version
 	 * @return bool
 	 */
-	public function checkZendEngine($version) {
+	public static function checkZendEngine($version) {
 		return version_compare(
 			zend_version(), $version, '>='
 		);
@@ -30,7 +30,7 @@ class RequirementChecker {
 	 * @param string $extension
 	 * @return bool
 	 */
-	public function checkExtension($extension) {
+	public static function checkExtension($extension) {
 		return extension_loaded($extension);
 	}
 
@@ -39,9 +39,9 @@ class RequirementChecker {
 	 * @param array $extensions
 	 * @return bool
 	 */
-	public function checkExtensions(array $extensions) {
+	public static function checkExtensions(array $extensions) {
 		foreach ($extensions as $extension) {
-			if (false === $this->checkExtension($extension)) {
+			if (false === self::checkExtension($extension)) {
 				return false;
 			}
 		}
@@ -54,7 +54,7 @@ class RequirementChecker {
 	 * @param string $username
 	 * @return bool
 	 */
-	public function checkCurrentUser($username) {
+	public static function checkCurrentUser($username) {
 		return $username === get_current_user();
 	}
 
@@ -63,7 +63,7 @@ class RequirementChecker {
 	 * @param string $dir
 	 * @return bool
 	 */
-	public function checkWritableDir($dir) {
+	public static function checkWritableDir($dir) {
 		return is_dir($dir) && is_writable($dir) && !is_file($dir);
 	}
 
@@ -71,7 +71,7 @@ class RequirementChecker {
 	 * Check if OpCache is enabled.
 	 * @return bool
 	 */
-	public function isOpCacheEnabled() {
+	public static function isOpCacheEnabled() {
 		return (bool)opcache_get_configuration()['directives']['opcache.enable'];
 	}
 
@@ -80,7 +80,7 @@ class RequirementChecker {
 	 * @param string|int $version
 	 * @return mixed
 	 */
-	public function checkOpCacheVersion($version) {
+	public static function checkOpCacheVersion($version) {
 		return version_compare(
 			opcache_get_configuration()['version']['version'], $version, '>='
 		);
