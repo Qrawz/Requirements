@@ -15,13 +15,7 @@ require 'vendor/autoload.php';
 ```
 
 ## RequirementChecker sample usage
-```php
-// Create new instance of RequirementChecker class.
-$requirements = new \FlexyProject\Requirements\RequirementChecker();
-```
-
 > Find all sample usage in the next wiki section: [RequirementChecker sample usage](https://github.com/FlexyProject/Requirements/wiki/RequirementChecker-sample-usage).
-
 
 ## License
 The files in this archive are released under the [GNU Lesser GPL v3](LICENSE.md) license.
